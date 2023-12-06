@@ -8,11 +8,11 @@ Se o pedido for válido, ela imprime o pedido e remove os itens do pedido da lis
 Se o pedido for inválido, ela imprime uma mensagem de erro. 
 Finalizando, a função main retorna 0 para indicar que o programa foi executado com sucesso.
 
-O arquivo itemmenu: É uma classe abstrata para representar diferentes itens do menu do restaurante.
+O arquivo menu: É uma classe abstrata para representar diferentes itens do menu do restaurante.
 
-O arquivo prato: É a classe que herda de itemmenu, representando os pratos disponíveis no menu.
+O arquivo prato: É a classe que herda de menu, representando os pratos disponíveis no menu.
 
-O arquivo bebida: É a classe que herda de itemmenu, representando as bebidas disponíveis no menu.
+O arquivo bebida: É a classe que herda de menu, representando as bebidas disponíveis no menu.
 
 O arquivo cliente: É a classe que representa os clientes do restaurante.
 
