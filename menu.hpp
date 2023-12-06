@@ -6,20 +6,20 @@
 #include <iostream>
 #include <string>
 
-class menu {
+class Menu {
 
 protected:
- std::string produto;
- double valor;
+ std::string Produto;
+ double Valor;
 
 public:
 
-    menu(const std::string &produto, double valor);
-    virtual ~menu();
+    Menu(const std::string &produto, double valor);
+    virtual ~Menu();
 
     virtual std::string getProduto() const;
     virtual double getValor() const;
-    virtual void vaifazeradesgraca() = 0;
+    virtual void vaiFazeradesgraca() = 0;
 };
 
 
