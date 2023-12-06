@@ -1,15 +1,24 @@
-#include <iostream>
-
-#include"menu.hpp"
 
 #ifndef PRATO_HPP
 #define PRATO_HPP
 
-class prato:protect menu {
+#include <iostream>
+
+#include"menu.hpp"
+
+class Prato:protect Menu {
+    
 private:
 
+produto;
+valor;
 
 
+public :
+
+
+std::string getProduto();
+double getValor();
 
 
 }
