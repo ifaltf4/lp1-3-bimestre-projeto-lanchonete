@@ -15,6 +15,7 @@ private:
 public:
     Pedido(cliente* cliente);
     virtual ~Pedido();
+
     void adicionarproduto(menu* produto);
     void removerproduto(menu* produto);
     double getpreco() const;

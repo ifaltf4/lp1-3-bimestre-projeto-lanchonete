@@ -19,6 +19,7 @@ public:
 
     virtual std::string getProduto() const;
     virtual double getValor() const;
+    
     virtual void vaiFazeradesgraca() = 0;
 };
 
