@@ -6,24 +6,23 @@
 #include <iostream>
 #include"menu.hpp"
 
-class Bebida:protect Menu {
+class Bebida : public menu {
+
 private:
 
-Produto;
-valor;
-double ML;
+    std::string nome;
+    double preco;
+public:
 
-public :
-
-
-std::string getProduto();
-double getValor();
-
-double getML();
-
-
-}
-
+    Bebida(const std::string &nome, double preco);
+    virtual ~Bebida();
+    std::string getNome() const;
+    void setNome(const std::string &novoNome);
+    double getPreco() const;
+    void setPreco(double novoPreco);
+    void fazerabebida() override;
+    
+};
 
 
 

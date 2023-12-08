@@ -6,22 +6,20 @@
 
 #include"menu.hpp"
 
-class Prato:protect Menu {
+class Prato : public menu {
     
 private:
-
-produto;
-valor;
-
-
-public :
-
-
-std::string getProduto();
-double getValor();
-
-
-}
+    std::string nome;
+    double preco;
+public:
+    Prato(const std::string &nome, double preco);
+    virtual ~Prato();
+    std::string getNome() const;
+    void setNome(const std::string &novoNome);
+    double getPreco() const;
+    void setPreco(double novoPreco);
+    void fazeracomida() override;
+};
 
 
 
