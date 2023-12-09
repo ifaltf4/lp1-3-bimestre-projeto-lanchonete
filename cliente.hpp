@@ -12,7 +12,7 @@ class Cliente {
 
  private:
     map<std::string,pedido >conta;
-
+    std::string nomecliente;
  public:
 
     cliente(const std::string &nome);

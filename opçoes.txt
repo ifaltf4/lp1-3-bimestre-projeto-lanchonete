@@ -1,9 +1,6 @@
-comidas 
 file a depressao
+14.25
 carne de timbu
+85.90
 carne de whatzap
-
-bebidas
-veneno hidratante
-baba de mendigo
-decepcao do professor
+96.22

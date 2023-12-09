@@ -1,6 +1,7 @@
 #include <iostream>
 #include<fstream>
 #include<string>
+#include "cliente.hpp"
 
 template bool compare<typename S , typename U>;
 using namespace std;
