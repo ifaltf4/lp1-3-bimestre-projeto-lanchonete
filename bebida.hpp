@@ -7,10 +7,17 @@
 #include"menu.hpp"
 
 class Bebida : public menu {
+    enum copo{
+
+       250ml,
+       500ml,
+       1L,
+       2L,
+
+    }
 private:
    
-    std::string nome;
-    double preco;
+    copo cheio;
     
 public:
 

@@ -15,11 +15,8 @@ protected:
  
 public:
 
-    Menu(const std::string &produto, double valor);
-    virtual ~Menu();
-
-    virtual std::string getProduto() const;
-    virtual double getValor() const;
+    virtual std::string getProduto() const{};
+    virtual double getValor() const{};
     
     virtual void vaiFazeradesgraca() = 0;
 };

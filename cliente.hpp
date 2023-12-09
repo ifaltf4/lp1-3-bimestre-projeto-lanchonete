@@ -6,11 +6,12 @@
 #include <iostream>
 #include <string>
 #include <map>
+
+#include "pedido.hpp"
 class Cliente {
 
  private:
     map<std::string,pedido >conta;
-   
 
  public:
 
