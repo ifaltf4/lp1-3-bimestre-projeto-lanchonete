@@ -12,7 +12,7 @@ class Prato : public menu {
        Pequeno,
        Medio,
        Grande,
-       familha,
+       familia,
 
     }
 private:
