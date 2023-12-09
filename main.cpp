@@ -10,15 +10,21 @@ fstream cardapio;
 
 int main(){
 
+
  while(true){
   cout<<" ::::::::::::::::::::::::::::::::::::::::::::::::::::: "<<endl;
   cout<<" :: Bem vindo ao restaurante  Komyoku De Kentalendo :: "<<endl;
   cout<<" ::::::::::::::::::::::::::::::::::::::::::::::::::::: "<<endl;
   cout<<"\n";
-  cout<<"  Escolha uma das opções caro cliente"<<endl;
-  cout<<"  1 - perfil do cliente."<<endl;
-  cout<<"  2 - perfil do gerente."<<endl;
-  cout<<"   0 - sair. "<<endl;
+  cout<<"  Escolha uma das opções caro cliente."<<endl;
+  cout<<" ::::::::::::::::::::::::::::::::::::::::::::::::::::: "<<endl;
+  cout<<"  1 - adicionar nome do cliente."<<endl;
+  cout<<"  2 - Ver cardapio."<<endl;
+  cout<<"  3 - Adicionar pedido."<<endl;
+  cout<<"  4 - remover pedido."<<endl;
+  cout<<"  5 - listar pedido."<<endl;
+  cout<<"  6 - pedir conta."<<endl;
+  cout<<"    0 - sair. "<<endl;
 
 
   int escolha;
@@ -45,7 +51,12 @@ int main(){
 
     return 0;
 }
-
+/*virtual std::string getNome() const;
+    virtual void setNome(const std::string &novoNome);
+    virtual void adicionarpedido(const std::string &item);
+    virtual void removerpedido(const std::string &item);
+    virtual void listarpedido() const;
+    virtual double calcularaconta() const;*/
 
 
 
