@@ -1,5 +1,3 @@
-
-
 #ifndef PEDIDO_HPP
 #define PEDIDO_HPP
 
@@ -20,7 +18,7 @@ public:
     void removerproduto(menu* produto);
     double getpreco() const;
     int getmesa();
-    int setmesa(int val)
+    int setmesa(int val);
 };
 
 #endif

@@ -1,5 +1,3 @@
-
-
 #ifndef MENU_HPP
 #define MENU_HPP
 
@@ -8,21 +6,17 @@
 #include <vector>
 
 class Menu {
-
 protected:
- std::string Produto;
- double Valor;
- 
-public:
+    std::string Produto;
+    double Valor;
 
-    virtual std::string getProduto() const{};
-    virtual double getValor() const{};
-    
+public:
+    virtual ~Menu() {}
+
+    virtual std::string getProduto() const = 0;
+    virtual double getValor() const = 0;
+
     virtual void vaiFazeradesgraca() = 0;
 };
-
-
-
-
 
 #endif
