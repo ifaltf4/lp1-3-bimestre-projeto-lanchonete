@@ -5,11 +5,12 @@
 
 #include <iostream>
 #include <string>
-
+#include <map>
 class Cliente {
 
  private:
-    std::string Nome;
+    map<std::string,pedido >conta;
+   
 
  public:
 

@@ -9,9 +9,10 @@
 
 class Pedido {
 private:
-    std::vector<menu*> produto;
-    cliente* cliente;
+    std::vector<menu*> escolha;
+    
     int mesa;
+    
 public:
     Pedido(cliente* cliente);
     virtual ~Pedido();

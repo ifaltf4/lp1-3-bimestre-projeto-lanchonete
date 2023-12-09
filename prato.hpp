@@ -7,14 +7,24 @@
 #include"menu.hpp"
 
 class Prato : public menu {
-    
+    enum tamanho{
+
+       Pequeno,
+       Medio,
+       Grande,
+       familha,
+
+    }
 private:
-    std::string nome;
-    double preco;
+
+tamanho opcao;
+    
 public:
     Prato(const std::string &nome, double preco);
     virtual ~Prato();
     
+    std::string setopcao(std::int tam);
+    int getopcao();
     std::string getNome() const;
 
     void setNome(const std::string &novoNome);

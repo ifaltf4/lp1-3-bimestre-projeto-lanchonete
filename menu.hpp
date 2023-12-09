@@ -5,13 +5,14 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 class Menu {
 
 protected:
  std::string Produto;
  double Valor;
-
+ 
 public:
 
     Menu(const std::string &produto, double valor);
