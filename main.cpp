@@ -11,13 +11,16 @@ fstream cardapio;
 int main(){
 
  while(true){
+  cout<<" ::::::::::::::::::::::::::::::::::::::::::::::::::::: "<<endl;
+  cout<<" :: Bem vindo ao restaurante  Komyoku De Kentalendo :: "<<endl;
+  cout<<" ::::::::::::::::::::::::::::::::::::::::::::::::::::: "<<endl;
+  cout<<"\n";
+  cout<<"  Escolha uma das opções caro cliente"<<endl;
+  cout<<"  1 - perfil do cliente."<<endl;
+  cout<<"  2 - perfil do gerente."<<endl;
+  cout<<"   0 - sair. "<<endl;
 
-  cou<<"bem vindo ao sistema unico "<<endl;
-  cout<<"do restaurante  komyoku de kentalendo"<<endl;
-  cout<<" escolha um dos perfis"
-  cout<<"1 - perfil do cliente."<<endl;
-  cout<<"2 - perfil do gerente."<<endl;
-  cout<<"0 - sair ;"
+
   int escolha;
   cin>>escolha;
   if(escolha==1){
