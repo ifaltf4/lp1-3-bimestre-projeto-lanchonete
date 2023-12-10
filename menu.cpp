@@ -1,24 +1,66 @@
 #include "menu.hpp"
+#include <fstream>
 
-    Menu::Menu(const std::string &produto, double valor){
-     
+std:: fstream arquivo;
 
-    }
-    
-    Menu::virtual ~Menu(){
+    Menu::Menu(){
+      arquivo.open("pratos.txt", std::ios::in);
 
-    }
-
-
-   Menu:: virtual std::string getProduto() const;{
-   return produto;
-
+ if(arquivo.is_open()){
+ std::string linha ="abcd";
+  while(getline(arquivo,linha)){
+   comes.push_back(linha);
    }
 
- Menu::virtual double getValor() const;{
-    return valor;
+  }
+ else{
 
- }
+ std::cout<< " ================================================ "<<std::endl;
+ std::cout<< " || pratos.txt não esta disponivel no momento  || "<<std::endl;
+ std::cout<< " ================================================ "<<std::endl;
+
+  }
+
+ 
+
+ arquivo.close();
+
+arquivo.open("bebidas.txt", std::ios::in);
+
+ if(arquivo.is_open()){
+
+  std::string linha="abcd";
+
+  while(getline(arquivo,linha)){ 
+
+   bebes.push_back(linha);
+    }
+  }
+ else{
+
+ std::cout<< " ================================================ "<<std::endl;
+ std::cout<< " || bebidas.txt não esta disponivel no momento || "<<std::endl;
+ std::cout<< " ================================================ "<<std::endl;
+
+  }
+
+
+ arquivo.close();
+       
+    };
+    
+
+   std::string Menu :: getProduto(std::string escolha) {
+      std::vector<std::string>::iterator it;
+      for(it=comes.begin();it < comes.end();it+2){
+        std::string linha=*it;
+        if(linha== escolha)
+          linha=*it++;
+          return linha;
+          }
+          return "nao existe";
+   
+   };
 
     
 

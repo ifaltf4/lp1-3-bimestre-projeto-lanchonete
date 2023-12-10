@@ -1,3 +1,4 @@
+
 #ifndef PRATO_HPP
 #define PRATO_HPP
 
@@ -5,31 +6,28 @@
 
 #include"menu.hpp"
 
-class Prato : public menu {
-    enum tamanho{
+class Prato : public Menu {
 
-       Pequeno,
-       Medio,
-       Grande,
-       familia,
-
-    }
-private:
-
-tamanho opcao;
-    
+ private:
+  std::string  Nome;
+  std::string tamanho;
+ double precos;
+ 
 public:
-    Prato(const std::string &nome, double preco);
+    //Prato();
     virtual ~Prato();
     
-    std::string setopcao(std::int tam);
+    std::string setopcao(int tam);
     int getopcao();
-    std::string getNome() const;
+    std::string getNome();
+
+    std::string getTamanho();
+    void setTamanho(std::string ch);
 
     void setNome(const std::string &novoNome);
-    double getPreco() const;
-    void setPreco(double novoPreco);
-    void fazeracomida() override;
+    double getPreco() ;
+    void setPreco();
+    //void fazeracomida() override;
 };
 
 

@@ -7,14 +7,15 @@
 
 class Menu {
 protected:
-    std::string Produto;
-    double Valor;
+std:: vector<std::string>comes;
+std:: vector<std::string>bebes;
 
 public:
-    virtual ~Menu() {}
+    Menu() {};
+    virtual ~Menu() {};
 
-    virtual std::string getProduto() const = 0;
-    virtual double getValor() const = 0;
+    virtual std::string getProduto(std::string escolha){};
+    
 
     virtual void vaiFazeradesgraca() = 0;
 };
