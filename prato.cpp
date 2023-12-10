@@ -1,13 +1,13 @@
 
 #include <iostream>
+#include "prato.hpp"
 
-   Prato(const std::string &nome, double preco);
-    virtual ~Prato();
+   Prato:: Prato(const std::string &nome, double preco){};
+   Prato::  virtual ~Prato(){};
     
-    std::string getNome() const;
+   Prato::  std::string getNome() const{};
 
-    void setNome(const std::string &novoNome);
-    double getPreco() const;
-    void setPreco(double novoPreco);
-    void fazeracomida() override;
-};
+    Prato:: void setNome(const std::string &novoNome){};
+    Prato:: double getPreco() const{};
+   Prato::  void setPreco(double novoPreco){};
+   Prato:: void fazeracomida() override{};

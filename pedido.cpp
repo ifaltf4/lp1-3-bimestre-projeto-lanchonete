@@ -1,12 +1,12 @@
 #include <iostream>
+#include "pedido.hpp"
 
- Pedido();
+ Pedido :: Pedido(){};
+    
+Pedido :: void adicionarproduto(menu* produto){};
+
+Pedido :: void removerproduto(menu* produto){};
+
+Pedido :: double getpreco() const{};
     
 
-    void adicionarproduto(menu* produto);
-
-    void removerproduto(menu* produto);
-
-    double getpreco() const;
-    
-    int getmesa();

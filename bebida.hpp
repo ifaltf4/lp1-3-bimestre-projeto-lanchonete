@@ -1,12 +1,10 @@
-
-
 #ifndef BEBIDA_HPP
 #define BEBIDA_HPP
 
 #include <iostream>
 #include"menu.hpp"
 
-class Bebida : public menu {
+class Bebida : public Menu {
     enum copo{
 
        250ml,

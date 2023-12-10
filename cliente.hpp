@@ -1,22 +1,20 @@
-
-
 #ifndef CLIENTE_HPP
 #define CLIENTE_HPP
 
 #include <iostream>
 #include <string>
 #include <map>
-
 #include "pedido.hpp"
+
 class Cliente {
 
  private:
-    map<std::string,pedido >conta;
+    std::map <std::string,Pedido >conta;
     std::string nomecliente;
  public:
 
-    cliente(const std::string &nome);
-   virtual ~cliente();
+    Cliente(const std::string &nome);
+   virtual ~Cliente();
 
     virtual std::string getNome() const;
     virtual void setNome(const std::string &novoNome);

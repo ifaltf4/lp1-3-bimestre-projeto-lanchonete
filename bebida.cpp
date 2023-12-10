@@ -1,10 +1,10 @@
 #include <iostream>
-
-    Bebida(const std::string &nome, double preco);
-    virtual ~Bebida();
+#include "bebida.hpp"
+   Bebida :: Bebida(const std::string &nome, double preco){};
+     Bebida ::virtual ~Bebida(){};
     
-    std::string getNome() const;
-    void setNome(const std::string &novoNome);
-    double getPreco() const;
-    void setPreco(double novoPreco);
-    void fazerabebida() override;
+     Bebida :: std::string getNome() const{};
+     Bebida :: void setNome(const std::string &novoNome){};
+     Bebida :: double getPreco() const{};
+     Bebida :: void setPreco(double novoPreco){};
+     Bebida :: void fazerabebida() override{};

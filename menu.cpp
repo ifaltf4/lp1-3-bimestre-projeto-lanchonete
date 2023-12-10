@@ -1,21 +1,21 @@
-#include "menu.h"
+#include "menu.hpp"
 
-    menu::Menu(const std::string &produto, double valor){
+    Menu::Menu(const std::string &produto, double valor){
      
 
     }
     
-    menu::virtual ~Menu(){
+    Menu::virtual ~Menu(){
 
     }
 
 
-   menu:: virtual std::string getProduto() const;{
+   Menu:: virtual std::string getProduto() const;{
    return produto;
 
    }
 
- menu::virtual double getValor() const;{
+ Menu::virtual double getValor() const;{
     return valor;
 
  }

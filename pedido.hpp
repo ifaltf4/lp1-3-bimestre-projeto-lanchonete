@@ -8,14 +8,14 @@
 
 class Pedido {
 private:
-    std::vector<menu*> escolha;
+    std::vector<Menu*> escolha;
     int mesa;
 public:
     Pedido();
     virtual ~Pedido();
 
-    void adicionarproduto(menu* produto);
-    void removerproduto(menu* produto);
+    void adicionarproduto(Menu* produto);
+    void removerproduto(Menu* produto);
     double getpreco() const;
     int getmesa();
     int setmesa(int val);
