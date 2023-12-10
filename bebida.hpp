@@ -5,28 +5,26 @@
 #include"menu.hpp"
 
 class Bebida : public Menu {
-    enum copo{
-
-       250ml,
-       500ml,
-       1L,
-       2L,
-
-    }
+    
 private:
-   
-    copo cheio;
+  std::string  Name;
+  std::string Copo;
+  double preco;
     
 public:
 
     Bebida(const std::string &nome, double preco);
     virtual ~Bebida();
     
-    std::string getNome() const;
-    void setNome(const std::string &novoNome);
-    double getPreco() const;
+    std::string getName();
+    void setName(const std::string &novoNome);
+    double getPreco();
     void setPreco(double novoPreco);
-    void fazerabebida() override;
+
+    std::string getCopo();
+    void setCopo(std::string liquido);
+
+   // void fazerabebida() override;
     
 };
 

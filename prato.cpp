@@ -13,7 +13,7 @@
    void  Prato:: setNome(const std::string &novoNome){
      std:: string linha =getProduto(novoNome);
      if (linha== "nao existe"){
-      std::cout<<"fFalha na operaçao"<<std::endl;
+      std::cout<<" Falha na operaçao"<<std::endl;
      }
     else {
       Nome = linha;

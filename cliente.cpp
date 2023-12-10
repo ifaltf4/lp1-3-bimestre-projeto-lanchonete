@@ -1,25 +1,36 @@
-  #include <iostream>
-  #include "cliente.hpp"
-  
-   Cliente :: Cliente(const std::string &nome){
-      cliente * primeiro= new cliente;
-      this->primeiro->setNome("comidas");
-      this->primeiro->adicionarpedido(nullptr);
+#include "cliente.hpp"
 
+Cliente::Cliente(const std::string &nome) : nomecliente(nome) {}
 
+Cliente::~Cliente() {}
+
+std::string Cliente::getNome() const {
+    return nomecliente;
+}
+
+void Cliente::setNome(const std::string &novoNome) {
+    nomecliente = novoNome;
+}
+
+void Cliente::adicionarpedido(const std::string &item) {
+    Pedido pedido(item);
+    conta[item] = pedido;
+}
+
+void Cliente::removerpedido(const std::string &item) {
+    conta.erase(item);
+}
+
+void Cliente::listarpedido() const {
+    for (auto const &p : conta) {
+        std::cout << "Item: " << p.first << " | Preço: " << p.second.getPreco() << std::endl;
     }
-   Cliente :: virtual ~cliente();
+}
 
-    Cliente :: virtual std::string getNome() const;{}
-
-    
-    Cliente ::  virtual void setNome(const std::string &novoNome);{}
-
-     Cliente :: virtual void adicionarpedido(const std::string &item){};
-
-     Cliente :: virtual void removerpedido(const std::string &item){};
-
-     Cliente :: virtual void listarpedido() const{};
-
-     Cliente :: virtual double calcularaconta() const{};
-
+double Cliente::calcularaconta() const {
+    double total = 0;
+    for (auto const &p : conta) {
+        total += p.second.getPreco();
+    }
+    return total;
+}
