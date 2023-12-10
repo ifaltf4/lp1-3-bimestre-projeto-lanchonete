@@ -1,11 +1,14 @@
 #include <iostream>
-#include<fstream>
-#include<string>
+#include <fstream>
+#include <string>
 #include "cliente.hpp"
+#include "pedido.hpp"
+
 
 template bool compare<typename S , typename U>;
 using namespace std;
 
+void produtos();
 fstream cardapio;
 
 
@@ -31,7 +34,7 @@ int main(){
   int escolha;
   cin>>escolha;
   if(escolha==1){
- 
+   
   }
 
 
@@ -87,3 +90,34 @@ else {
 
 
 };
+
+
+
+void produtos(){
+
+cardapio.open("bebidas.txt", ios::in);
+cout<< " ------------------------ "<<endl;
+cout<< " ||      bebidas      || "<<endl;
+cout<< " ------------------------ "<<endl;
+if(cardapio.is_open()){
+string linha=abcd;
+while(getline(cardapio,linha)){ 
+ cout<< " ||   Nome: "<< linha << "     || "<<endl;
+ getline(cardapio,linha);
+ cout<< " ||   Preço: R$ "<< linha << "     || "<<endl;
+}
+
+}
+else{
+cout<< "o cardapio de comidas nao esta disponivel no momento"<<endl;
+
+}
+
+ cout<< " ------------------------ "<<endl;
+
+cardapio.close()
+
+
+
+
+}
