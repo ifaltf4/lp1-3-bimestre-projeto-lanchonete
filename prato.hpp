@@ -4,32 +4,29 @@
 
 #include <iostream>
 
-#include"menu.hpp"
+#include "menu.hpp"
 
-class Prato : public Menu {
+class Prato : public Menu
+{
 
- private:
-  std::string  Nome;
-  std::string tamanho;
- double precos;
- 
+private:
+    std::string Nome;
+    std::string tamanho;
+    double precos;
+
 public:
-    //Prato();
+    // Prato();
     virtual ~Prato();
-    
-    std::string setopcao(int tam);
-    int getopcao();
-    std::string getNome();
 
+
+    std::string getNome();
     std::string getTamanho();
     void setTamanho(std::string ch);
 
     void setNome(const std::string &novoNome);
-    double getPreco() ;
+    double getPreco();
     void setPreco();
-    //void fazeracomida() override;
+    // void fazeracomida() override;
 };
-
-
 
 #endif

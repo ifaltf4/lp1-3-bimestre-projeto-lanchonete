@@ -3,20 +3,21 @@
 
 #include <vector>
 #include "menu.hpp"
-#include "cliente.hpp"
 
-
-class Pedido {
+class Pedido
+{
 private:
-    std::vector<Menu*> escolha;
+    std::vector<Menu *> escolha;
     int mesa;
+
 public:
-    Pedido();
+    Pedido(std::string iten);
+
     virtual ~Pedido();
 
-    void adicionarproduto(Menu* produto);
-    void removerproduto(Menu* produto);
-    double getpreco() const;
+    void adicionarproduto(Menu *produto);
+    void removerproduto(Menu *produto);
+    double getPreco() const;
     int getmesa();
     int setmesa(int val);
 };

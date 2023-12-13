@@ -2,32 +2,27 @@
 #define BEBIDA_HPP
 
 #include <iostream>
-#include"menu.hpp"
+#include "menu.hpp"
 
-class Bebida : public Menu {
-    
+class Bebida : public Menu
+{
+
 private:
-  std::string  Name;
+  std::string Name;
   std::string Copo;
   double preco;
-    
+
 public:
+  Bebida(const std::string &nome, double preco);
+  virtual ~Bebida();
 
-    Bebida(const std::string &nome, double preco);
-    virtual ~Bebida();
-    
-    std::string getName();
-    void setName(const std::string &novoNome);
-    double getPreco();
-    void setPreco(double novoPreco);
+  std::string getName();
+  void setName(const std::string &novoNome);
+  double getPreco();
+  void setPreco(double novoPreco);
 
-    std::string getCopo();
-    void setCopo(std::string liquido);
-
-   // void fazerabebida() override;
-    
+  std::string getCopo();
+  void setCopo(std::string liquido);
 };
-
-
 
 #endif
