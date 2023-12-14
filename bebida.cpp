@@ -1,24 +1,34 @@
 #include <iostream>
 #include "bebida.hpp"
 
+/**
+ * @file bebida.cpp
+ * @brief armazena as bebidas pedidas
+ * @author jose victor valerio da costa
+ * @date 13/12/2023 
+ * 
+ */
+
 std::string Menu ::getProduto(std::string escolha)
 {
    std::vector<std::string>::iterator it;
    for (it = this->bebes.begin(); it < this->bebes.end(); it + 2)
    {
       std::string linha = *it;
-      if (linha == escolha){
+      if (linha == escolha)
+      {
          return linha;
-         }
+      }
    }
    return "nao existe";
 }
+/////////////////////////////////////////////////////////////
 
 std::string Bebida ::getName()
 {
    return Name;
 }
-
+/////////////////////////////////////////////////////////////
 bool Bebida ::setName(const std::string &novoNome)
 {
    std::string linha = getProduto(novoNome);
@@ -29,16 +39,16 @@ bool Bebida ::setName(const std::string &novoNome)
    else
    {
       Name = linha;
-      
+
       return true;
    }
 }
-
+/////////////////////////////////////////////////////////////
 double Bebida ::getPreco()
 {
    return this->preco;
 }
-
+/////////////////////////////////////////////////////////////
 bool Bebida ::setPreco(std::string tam)
 {
    int i = 0;
@@ -51,7 +61,7 @@ bool Bebida ::setPreco(std::string tam)
       {
          std::string linha = *it++;
          this->preco = std::stod(linha);
-         setCopo(tam);
+         setCopo(tam);/**<setcopo e chamado pois dependendo do tamanho do recipiente o preço ira mudar*/
          i++;
          break;
       }
@@ -71,8 +81,9 @@ bool Bebida ::setPreco(std::string tam)
       {
          this->preco += 0;
       }
-      else{
-         std::cout<<"tente novamente"<<std::endl;
+      else
+      {
+         std::cout << "tente novamente" << std::endl;
       }
    }
    else
@@ -80,13 +91,13 @@ bool Bebida ::setPreco(std::string tam)
       return false;
    }
 }
-
+/////////////////////////////////////////////////////////////
 std::string Bebida::getCopo()
 {
    return this->Copo;
 }
 
-void Bebida::setCopo(std::string liquido)
+void Bebida::setCopo(std::string liquido)/** < Esse trecho poderia ter usado enum porém esse jeito foi mais simples*/
 {
 
    if (liquido == "1" || liquido == "1l " || liquido == "1L")

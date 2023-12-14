@@ -1,6 +1,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+/**
+ * @file menu.hpp 
+ * @brief classe abstrata
+ * @author Matheus levy silva do nascimento
+ */
 
 
 #ifndef MENU_HPP
@@ -17,8 +23,7 @@ protected:
 
 public:
     Menu(){};
-    virtual ~Menu()=0;
-
+    virtual ~Menu();
     virtual std::string getProduto(std::string escolha);
     
    

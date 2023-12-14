@@ -1,10 +1,15 @@
 #include "menu.hpp"
-#include <fstream>
+/**
+ * @file Menu.cpp
+ * @brief Classe que serve de cardapio do restaurante
+ * @author Jose victor valerio da costa. 
+ */
+ 
 
-std::fstream arquivo;
-
+/** @brief Essa funçao pega os pratos e bebidas servidos no restaurante e os passa pra um vector */
 Menu::Menu()
 {
+  std::fstream arquivo;
   arquivo.open("pratos.txt", std::ios::in);
 
   if (arquivo.is_open())
@@ -49,6 +54,25 @@ Menu::Menu()
   arquivo.close();
 };
 /////////////////////////////////////////////////
+
+Menu:: ~Menu(){
+ std::vector<std::string>::iterator it;
+ for(it=comes.begin();it<comes.end();it++){
+    comes.erase(it);
+ }
+  for(it=bebes.begin();it<bebes.end();it++){
+    bebes.erase(it);
+ }
+
+}
+
+/////////////////////////////////////////////////////////////
+
+/**
+ * @brief verifica se e um produto que esta no cardapio
+ * @param o nome do produto a ser comparado
+ * @return uma validaçao se ele esta ou nao no vector
+*/
 
 std::string Menu ::getProduto(std::string escolha)
 {
