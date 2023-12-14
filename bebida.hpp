@@ -13,16 +13,17 @@ private:
   double preco;
 
 public:
-  Bebida(const std::string &nome, double preco);
+  Bebida();
   virtual ~Bebida();
 
   std::string getName();
-  void setName(const std::string &novoNome);
+  bool setName(const std::string &novoNome);
   double getPreco();
-  void setPreco(double novoPreco);
+  bool setPreco(std::string tam);
 
   std::string getCopo();
   void setCopo(std::string liquido);
+  
 };
 
 #endif

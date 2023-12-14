@@ -15,7 +15,7 @@ private:
     double precos;
 
 public:
-    // Prato();
+    
     virtual ~Prato();
 
 
@@ -23,10 +23,11 @@ public:
     std::string getTamanho();
     void setTamanho(std::string ch);
 
-    void setNome(const std::string &novoNome);
+    bool setNome(const std::string &novoNome);
     double getPreco();
-    void setPreco();
-    // void fazeracomida() override;
-};
+    bool setPreco(std::string tam);
+
+    };
+    
 
 #endif

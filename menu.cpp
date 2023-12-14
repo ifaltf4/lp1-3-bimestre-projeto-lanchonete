@@ -12,7 +12,7 @@ Menu::Menu()
     std::string linha = "abcd";
     while (getline(arquivo, linha))
     {
-      comes.push_back(linha);
+      this->comes.push_back(linha);
     }
   }
   else
@@ -35,7 +35,7 @@ Menu::Menu()
     while (getline(arquivo, linha))
     {
 
-      bebes.push_back(linha);
+      this->bebes.push_back(linha);
     }
   }
   else
@@ -48,6 +48,7 @@ Menu::Menu()
 
   arquivo.close();
 };
+/////////////////////////////////////////////////
 
 std::string Menu ::getProduto(std::string escolha)
 {
@@ -61,33 +62,3 @@ std::string Menu ::getProduto(std::string escolha)
   return "nao existe";
 };
 
-void Menu::mostrarcardapio(int num)
-{
-
-  if (num == 1)
-  {
-    std::string linha;
-    std::vector<std::string>::iterator it;
-    for (it = comes.begin(); it < comes.end(); it + 2)
-    {
-      std::string linha = *it;
-      std::cout << " ||"<< " prato: " << linha << std::endl;
-      std::string linha = *it++;
-      std::cout << " ||"<< " Preço: R$ " << linha << std::endl;
-      std::cout << " ||--------------------- " << std::endl;
-    }
-  }
-  else if (num == 2)
-  {
-    std::string linha;
-    std::vector<std::string>::iterator it;
-    for (it = bebes.begin(); it < bebes.end(); it + 2)
-    {
-      std::string linha = *it;
-      std::cout << " ||"<< " Bebida: " << linha << std::endl;
-      std::string linha = *it++;
-      std::cout << " ||"<< " Preço: R$ " << linha << std::endl;
-      std::cout << " ||--------------------- " << std::endl;
-    }
-  }
-}

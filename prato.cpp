@@ -5,71 +5,75 @@
 std::string Prato::getNome()
 {
 
-   return tamanho;
+   return this->tamanho;
 }
 //////////////////////////////////////////////////////////
-void Prato::setNome(const std::string &novoNome)
+bool Prato::setNome(const std::string &novoNome)
 {
    std::string linha = getProduto(novoNome);
    if (linha == "nao existe")
    {
 
-      std::cout << "fFalha na operaçao" << std::endl;
+      std::cout << "Falha na operaçao" << std::endl;
    }
    else
    {
 
-      Nome = linha;
+      this->Nome = linha;
    }
 }
 
 double Prato::getPreco()
 {
-   return precos;
+   return this->precos;
 }
 //////////////////////////////////////////////////////////
-void Prato::setPreco()
+bool Prato::setPreco(std::string tam)
 {
    int i = 0;
    std::vector<std::string>::iterator it;
 
-   for (it = comes.begin(); it < comes.end(); it++)
+   for (it = this->comes.begin(); it < this->comes.end(); it++)
    {
       std::string linha = *it;
-      if (linha == Nome)
+      if (linha == this->Nome)
       {
          std::string linha = *it++;
-         precos = std::stod(linha);
+         this->precos = std::stod(linha);
+         setTamanho(tam);
          i++;
          break;
       }
    }
+   
    if (i > 0)
    {
       if (getTamanho() == "P")
       {
-         precos += 0;
+         this->precos += 0;
       }
       else if (getTamanho() == "M")
       {
-         precos += 1.75;
+         this->precos += 1.75;
       }
       else if (getTamanho() == "G")
       {
-         precos += 4.50;
+         this->precos += 2.50;
       }
    }
    else
    {
-      std::cout << "voce nao selecionou o tamanho" << std::endl;
+ return false;
+     
    }
+   return true;
 }
 
 //////////////////////////////////////////////////////////
 std::string Prato::getTamanho()
 {
 
-   return tamanho;
+   return this->tamanho;
 }
 //////////////////////////////////////////////////////////
 void Prato::setTamanho(std::string ch)
@@ -77,15 +81,15 @@ void Prato::setTamanho(std::string ch)
 
    if (ch == "P" || ch == "p")
    {
-      tamanho = "P";
+      this->tamanho = "P";
    }
    else if (ch == "M" || ch == "m")
    {
-      tamanho = "M";
+      this->tamanho = "M";
    }
    else if (ch == "G" || ch == "g")
    {
-      tamanho = "G";
+      this->tamanho = "G";
    }
    else
    {
@@ -93,3 +97,5 @@ void Prato::setTamanho(std::string ch)
       std::cout << " Tamanho invalido !!!!!" << std::endl;
    }
 }
+
+

@@ -4,11 +4,12 @@
 std::string Menu ::getProduto(std::string escolha)
 {
    std::vector<std::string>::iterator it;
-   for (it = bebes.begin(); it < bebes.end(); it + 2)
+   for (it = this->bebes.begin(); it < this->bebes.end(); it + 2)
    {
       std::string linha = *it;
-      if (linha == escolha)
+      if (linha == escolha){
          return linha;
+         }
    }
    return "nao existe";
 }
@@ -18,64 +19,71 @@ std::string Bebida ::getName()
    return Name;
 }
 
-void Bebida ::setName(const std::string &novoNome)
+bool Bebida ::setName(const std::string &novoNome)
 {
    std::string linha = getProduto(novoNome);
    if (linha == "nao existe")
    {
-      std::cout << "fFalha na operaçao" << std::endl;
+      return false;
    }
    else
    {
       Name = linha;
+      
+      return true;
    }
 }
 
 double Bebida ::getPreco()
 {
-   return preco;
+   return this->preco;
 }
 
-void Bebida ::setPreco(double novoPreco)
+bool Bebida ::setPreco(std::string tam)
 {
    int i = 0;
    std::vector<std::string>::iterator it;
 
-   for (it = bebes.begin(); it < bebes.end(); it++)
+   for (it = this->bebes.begin(); it < this->bebes.end(); it++)
    {
       std::string linha = *it;
-      if (linha == Name)
+      if (linha == this->Name)
       {
          std::string linha = *it++;
-         preco = std::stod(linha);
+         this->preco = std::stod(linha);
+         setCopo(tam);
          i++;
          break;
       }
    }
+
    if (i > 0)
    {
       if (getCopo() == "1l")
       {
-         preco += 1.25;
+         this->preco += 1.25;
       }
       else if (getCopo() == "2l")
       {
-         preco += 2.00;
+         this->preco += 2.00;
       }
       else if (getCopo() == "250ml")
       {
-         preco += 0;
+         this->preco += 0;
+      }
+      else{
+         std::cout<<"tente novamente"<<std::endl;
       }
    }
    else
    {
-      std::cout << "você não selecionou o tamanho!!" << std::endl;
+      return false;
    }
 }
 
 std::string Bebida::getCopo()
 {
-   return Copo;
+   return this->Copo;
 }
 
 void Bebida::setCopo(std::string liquido)
@@ -83,16 +91,16 @@ void Bebida::setCopo(std::string liquido)
 
    if (liquido == "1" || liquido == "1l " || liquido == "1L")
    {
-      Copo = "1l";
+      this->Copo = "1l";
    }
 
    else if (liquido == "2" || liquido == "2l " || liquido == "2L")
    {
-      Copo = "2l";
+      this->Copo = "2l";
    }
    else if (liquido == "250" || liquido == "250ml " || liquido == "250ML")
    {
-      Copo = "250ml";
+      this->Copo = "250ml";
    }
 
    else

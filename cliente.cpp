@@ -1,35 +1,37 @@
 #include "cliente.hpp"
-
-Cliente::Cliente()
+Pedido *novoPedido= new Pedido;
+Cliente :: Cliente()
 {
-    nomecliente = "fulano";
+   this->nomecliente = "fulano";
+    
 }
 
-Cliente::~Cliente() {}
 
 std::string Cliente::getNome() const
 {
-    return nomecliente;
+    return this->nomecliente;
 }
 
 void Cliente::setNome(const std::string &novoNome)
 {
-    nomecliente = novoNome;
+    this->nomecliente = novoNome;
 }
 
 void Cliente::adicionarpedido(const std::string &item)
 {
-    Pedido novoPedido(item);
-    conta[item] = novoPedido;
+    
+    novoPedido->adicionarproduto(item);
+     
+    this->conta[nomecliente] = *novoPedido;
 }
 
 void Cliente::removerpedido(const std::string &item)
 {
-    conta.erase(item);
+    novoPedido->removerproduto(item);
 }
 
 void Cliente::listarpedido() const
-{
+{   std::cout<< this->getNome()<<std::endl;
     for (const auto &pedido : conta)
     {
         std::cout << pedido.first << std::endl;
@@ -38,10 +40,5 @@ void Cliente::listarpedido() const
 
 double Cliente::calcularaconta() const
 {
-    double total = 0;
-    for (const auto &pedido : conta)
-    {
-        total += pedido.second.getPreco();
-    }
-    return total;
+    return novoPedido->getPreco();
 }

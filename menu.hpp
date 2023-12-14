@@ -11,16 +11,17 @@
 class Menu
 {
 protected:
+
     std::vector<std::string> comes;
     std::vector<std::string> bebes;
 
 public:
     Menu(){};
-    virtual ~Menu(){};
+    virtual ~Menu()=0;
 
     virtual std::string getProduto(std::string escolha);
     
-    virtual void mostrarcardapio(int num); 
+   
    
 };
 

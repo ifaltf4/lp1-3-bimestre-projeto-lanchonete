@@ -4,8 +4,8 @@
 #include <iostream>
 #include <string>
 #include <map>
-// cliente tera que ser reformulado 
 #include "pedido.hpp"
+
 class Cliente
 {
 
@@ -15,7 +15,7 @@ private:
 
 public:
    Cliente();
-   virtual ~Cliente();
+   virtual ~Cliente(){};
 
    virtual std::string getNome() const;
    virtual void setNome(const std::string &novoNome);
@@ -23,6 +23,7 @@ public:
    virtual void removerpedido(const std::string &item);
    virtual void listarpedido() const;
    virtual double calcularaconta() const;
+ 
 };
 
 #endif

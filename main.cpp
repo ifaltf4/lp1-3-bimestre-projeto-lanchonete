@@ -4,13 +4,12 @@
 #include "cliente.hpp"
 #include "pedido.hpp"
 #include "menu.hpp"
-#include "bebida.hpp"
-#include "prato.hpp"
+
 
 using namespace std;
 Cliente* pedir= new Cliente;
 void produtos();
-auto *cardapio = new Menu();
+
 
 
 int main()
@@ -61,7 +60,7 @@ int main()
       pedir->removerpedido(item);
     }
     else if (escolha == 5)
-    {
+    { 
       pedir->listarpedido();
     }
     else if (escolha == 6)
@@ -89,11 +88,11 @@ void produtos()
   cout << " ======================== " << endl;
   cout << " ||       Pratos       || " << endl;
   cout << " ======================== " << endl;
-  cardapio->mostrarcardapio(1);
+
 
   cout << " =========================== " << endl;
 
-  cardapio->mostrarcardapio(2);
+ 
   cout << " ======================== " << endl;
   cout << " ||      Bebidas       || " << endl;
   cout << " ======================== " << endl;
