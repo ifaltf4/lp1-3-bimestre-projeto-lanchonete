@@ -1,44 +1,60 @@
 #include "cliente.hpp"
-Pedido *novoPedido= new Pedido;
+
+
 Cliente :: Cliente()
-{
-   this->nomecliente = "fulano";
-    
+{Pedido *novoPedido= new Pedido;
+ 
+   nomecliente = "fulano";
+   conta[nomecliente]= *novoPedido;
+
 }
 
 
-std::string Cliente::getNome() const
-{
-    return this->nomecliente;
+Cliente :: ~Cliente(){
+std::map<std::string,Pedido>::iterator it;
+for(it=conta.begin(); it != conta.end();it++){
+  conta.erase(it);
+
 }
 
-void Cliente::setNome(const std::string &novoNome)
-{
-    this->nomecliente = novoNome;
+
 }
 
-void Cliente::adicionarpedido(const std::string &item)
+
+
+
+std::string Cliente:: getNome() 
 {
+    return nomecliente;
+}
+
+void Cliente::setNome( std::string novoNome)
+{
+    nomecliente = novoNome;
+}
+
+void Cliente::adicionarpedido( std::string item)
+{Pedido *novoPedido= new Pedido;
     
     novoPedido->adicionarproduto(item);
      
-    this->conta[nomecliente] = *novoPedido;
+    conta[nomecliente] = *novoPedido;
 }
 
-void Cliente::removerpedido(const std::string &item)
-{
+void Cliente::removerpedido( std::string item)
+{Pedido *novoPedido= new Pedido;
     novoPedido->removerproduto(item);
 }
 
-void Cliente::listarpedido() const
+void Cliente::listarpedido() 
 {   std::cout<< this->getNome()<<std::endl;
-    for (const auto &pedido : conta)
+    for (const auto &Pedido : conta)
     {
-        std::cout << pedido.first << std::endl;
+        std::cout << Pedido.first << std::endl;
     }
 }
 
-double Cliente::calcularaconta() const
-{
+double Cliente::calcularaconta() 
+{Pedido *novoPedido= new Pedido;
     return novoPedido->getPreco();
 }

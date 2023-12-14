@@ -2,13 +2,11 @@
 #include <fstream>
 #include <string>
 #include "cliente.hpp"
-#include "pedido.hpp"
-#include "menu.hpp"
 
 
 using namespace std;
-Cliente* pedir= new Cliente;
-void produtos();
+Cliente *pedir ;
+//void produtos();
 
 
 
@@ -43,7 +41,7 @@ int main()
     }
     else if (escolha == 2)
     {
-      produtos();
+     // produtos();
     }
     else if (escolha == 3)
     {
@@ -70,6 +68,7 @@ int main()
     }
     else if (escolha == 0)
     {
+      delete(pedir);
       cout << " ============================================== " << endl;
       cout << " == Muito obrigado por acessar nosso sistema == " << endl;
       cout << " ============================================== " << endl;
@@ -80,7 +79,7 @@ int main()
   return 0;
 }
 
-void produtos()
+/*void produtos()
 {
 
   
@@ -98,4 +97,4 @@ void produtos()
   cout << " ======================== " << endl;
 
   cout << " =========================== " << endl;
-}
+}*/

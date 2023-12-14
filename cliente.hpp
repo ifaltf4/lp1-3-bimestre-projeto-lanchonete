@@ -14,15 +14,16 @@ private:
    std::string nomecliente;
 
 public:
-   Cliente();
-   virtual ~Cliente(){};
 
-   virtual std::string getNome() const;
-   virtual void setNome(const std::string &novoNome);
-   virtual void adicionarpedido(const std::string &item);
-   virtual void removerpedido(const std::string &item);
-   virtual void listarpedido() const;
-   virtual double calcularaconta() const;
+    Cliente();
+    ~Cliente();
+
+   std::string getNome() ;
+   void setNome(std::string novoNome);
+   void adicionarpedido(std::string item);
+   void removerpedido(std::string item);
+   void listarpedido() ;
+   double calcularaconta() ;
  
 };
 
