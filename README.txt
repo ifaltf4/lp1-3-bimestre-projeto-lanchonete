@@ -18,4 +18,6 @@ O arquivo cliente: É a classe que representa os clientes do restaurante.
 
 O arquivo pedido: É a classe que contém informações sobre os pedidos feitos pelos clientes.
 
-O arquivo opçoes.txt: É o arquivo que contem as opçoes do menu
+O arquivo bebidas.txt: É o arquivo que contem as opçoes das bebidas do menu
+
+O arquivo pratos.txt: É o arquivo que contem as opçoes dos pratos do menu
